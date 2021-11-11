@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link Css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Link Font Awesome -->
+    <script src="https://kit.fontawesome.com/3a63925f5b.js" crossorigin="anonymous"></script>
+
+    <title>Tasks List</title>
+
+</head>
+<body>
+    <main class="main">
+        <h1>Lista de tareas</h1>
+        <div class="contenedor contenedor-flex">
+            <div class="contenedor-hijo prioridades"> 
+                <h2 class="h2-prioridades">Prioridades</h2>
+                <ul class="lista-prioridades">
+                    <li class="prioridad prioridad-alta">Prioridad alta</li>
+                    <li class="prioridad prioridad-regular">Prioridad regular</li>
+                    <li class="prioridad prioridad-baja">Prioridad baja</li>
+                </ul>
+            </div>
+            <div class="contenedor-hijo contenedor-agregar">
+                <h2 class="h2-subtitulo">Agregar tareas</h2>
+                <form action="#" class="formulario" id="formulario">  
+
+                    <!-- Input del nombre de la tarea -->
+                    <div class="contenido-input">
+                        <label for="nombreTarea" class="label-input">Nombre de la tarea</label>
+                        <input autocomplete="off" placeholder="Ingrese la tarea" type="text" name="inputTarea" id="nombre-tarea" class="input-nombre">
+                    </div>
+
+                    <!-- Inputs para la prioridad de la tarea -->
+                    <div class="inputs-radio">
+                        <p class="prioridad-p">Prioridad de la tarea:</p>
+                        <div class="grupo-input">
+                            <input class="input-radio opcion-1" type="radio" name="opcion" id="opcion-1" value="Alta">
+                            <label for="inputRadio" class="label-radio">Alta</label><br>
+                        </div>
+                        <div class="grupo-input">
+                            <input class="input-radio opcion-2" type="radio" name="opcion" id="opcion-2" value="Regular">
+                            <label for="inputRadio" class="label-radio">Regular</label><br>
+                        </div>
+                        <div class="grupo-input">
+                            <input class="input-radio opcion-3" type="radio" name="opcion" id="opcion-3" value="Baja">
+                            <label for="inputRadio" class="label-radio">Baja</label><br>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Botones de agregar y vaciar -->
+                    <div class="botones-formulario">
+                        <button class="btn btn-agregar">Agregar</button>
+                        <button class="btn btn-vaciar">Vaciar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contenedor-hijo contenedor-tareas">
+                <h2>Tareas</h2>
+                <div class="contenido-tareas"></div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+:root{
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --colorPrincipal: #3C3F44;
+    --colorSecundario: #5F636B;
+    --baja: #48C563;
+    --regular: #C2C548;
+    --alta: #C54848;
+    --realizado: #1e2022;
+}
+
+body{
+    background-color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+}
+
+h2{
+    letter-spacing: 1px;
+}
+
+.main h1{
+    text-align: center;
+    color: white;
+}
+
+.contenedor{
+    width: 95%;
+    margin: 20px auto auto auto;
+}
+
+.contenedor-flex{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-hijo{
+    background-color: var(--colorSecundario);
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px 0px #00000040;
+}
+
+.prioridades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h2-prioridades{
+    color: white;
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+    .lista-prioridades{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+.prioridad{
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.prioridad-alta::marker{
+    color: var(--alta);
+}
+.prioridad-regular::marker{
+    color: var(--regular);
+}
+.prioridad-baja::marker{
+    color: var(--baja);
+}
+
+
+
+.contenedor-agregar{
+    height: 100%;
+}
+
+.contenedor-agregar h2{
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.contenedor-agregar .formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-radio{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 0 !important;
+    border: 2px solid var(--colorPrincipal);
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+
+.input-radio:hover{
+    cursor: pointer;
+    border: 2px solid #27292c;
+}
+
+.input-radio:checked{
+    border: 6px solid var(--colorPrincipal);
+}
+
+.grupo-input{
+    margin-bottom: 10px;
+}
+
+.label-radio{
+    margin-left: 10px;
+}
+
+.label-input{
+    font-size: 20px;
+}
+
+.input-nombre{
+    background-color: var(--colorPrincipal);
+    margin-top: 10px;
+    border: none;
+    color: white;
+    padding: 15px;
+    width: 95%;
+    outline: none;
+    border-radius: 5px;
+    transition: border-bottom ease 1s;
+}
+
+.input-nombre:focus{
+    outline: none;
+}
+
+.input-nombre:active{
+    outline: none;
+}
+
+.input-nombre::placeholder{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.input-nombre:focus::placeholder{
+    color: transparent;
+}
+
+.danger-nombre{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.p-danger{
+    color: var(--colorPrincipal);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formulario label{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.formulario .prioridad-p{
+    font-size: 20px;
+    color: white;
+}
+
+.input-radio{
+    margin-bottom: 20px;
+}
+
+.label-radio{
+    font-size: 18px;
+}
+
+.botones-formulario{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.btn{
+    width: 60%;
+    height: 50px;
+    background-color: var(--colorPrincipal);
+    border: none;
+    color: white;
+    transition: background-color ease .5s;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #27292c;
+}
+
+.contenedor-tareas{
+    margin-bottom: 20px;
+}
+
+.contenedor-tareas h2{
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.tarea-flex{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tarea{
+    width: 85%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--colorPrincipal);
+    position: relative;
+    color: white;
+    margin-bottom: 10px;
+    transition: background-color ease .5s;
+}
+
+.tarea:hover{
+    cursor: pointer;
+    background-color: #27292c;
+}
+
+.realizado{
+    text-decoration: line-through;
+    background-color: var(--realizado);
+    color: gray;
+}
+
+.barra{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 40px;
+    background-color: var(--baja);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.barra-baja{
+    position: absolute;
+    width: 30px;
+    height: 49px;
+    top: 0;
+    right: 0;
+    background-color: var(--baja);
+}
+
+.barra-regular{
+    position: absolute;
+    width: 30px;
+    height: 49px;
+    top: 0;
+    right: 0;
+    background-color: var(--regular);
+}
+
+.barra-alta{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 49px;
+    background-color: var(--alta);
+}
+
+.i-dlt{
+    font-size: 40px;
+    padding-top: 3px;
+    color: var(--colorPrincipal);
+    transition: transform ease .5s;
+}
+
+.i-dlt:hover{
+    cursor: pointer;
+    transform: rotate(-30deg);
+}
+
+@media (max-width: 1248px ) {
+    .contenedor-hijo{
+        width: 90%;
+    }
+}
+
+@media (max-width: 625px ) {
+    .tarea{
+        max-width: 80%;
+    }
+}
+@media (max-width: 468px ) {
+    .tarea{
+        max-width: 76%;
+    }
+}
+
+@media (max-width: 386px) {
+    .tarea{
+        width: 70%;
+    }
+}
+
+
